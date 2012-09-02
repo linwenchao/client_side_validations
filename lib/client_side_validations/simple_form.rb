@@ -7,10 +7,11 @@ module ClientSideValidations
           def self.client_side_form_settings(options, form_helper)
             {
               :type => self.to_s,
-              :error_class => ::SimpleForm.error_class,
-              :error_tag => ::SimpleForm.error_tag,
-              :wrapper_error_class => ::SimpleForm.wrapper_error_class,
-              :wrapper_tag => ::SimpleForm.wrapper_tag
+              :error_class => "help-inline",
+              :error_tag => "span",
+              :wrapper_error_class => "error",
+              :wrapper_tag => "div.control-group",
+              :container_tag => "div.controls"
             }
           end
         end
