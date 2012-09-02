@@ -353,7 +353,9 @@ var clientSideValidations = {
           var wrapper = element.closest(settings.wrapper_tag);
           wrapper.addClass(settings.wrapper_error_class);
           var errorElement = $('<' + settings.error_tag + ' class="' + settings.error_class + '">' + message + '</' + settings.error_tag + '>');
-          wrapper.append(errorElement);
+          //wrapper.append(errorElement);
+          var container = element.closest(settings.container_tag);
+          container.append(errorElement);
         } else {
           element.parent().find(settings.error_tag + '.' + settings.error_class).text(message);
         }
